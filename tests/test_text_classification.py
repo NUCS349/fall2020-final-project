@@ -6,8 +6,7 @@ def test_dbpedia():
     np.random.seed(0)
     rng = np.random.default_rng(0)
 
-    train_exs, dev_exs, test_exs = load_data('data/dbpedia')
-    train_exs = rng.choice(train_exs, size=5000)
+    train_exs, dev_exs, test_exs = load_data('data/dbpedia_small')
 
     model = TextClassificationModel()
     model.train([x['text'] for x in train_exs], [int(x['label']) for x in train_exs])
