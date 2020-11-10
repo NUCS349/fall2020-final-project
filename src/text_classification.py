@@ -1,9 +1,5 @@
 import numpy as np
 import sklearn
-import sklearn.svm
-import sklearn.feature_extraction.text
-
-from .multiclass_gradient_descent import MultiClassGradientDescent
 
 
 class TextClassificationModel:
