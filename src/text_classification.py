@@ -7,10 +7,42 @@ class TextClassificationModel:
         raise NotImplementedError()
 
     def train(self, texts, labels):
-        """Trains the model.  You can implement this however you
-        like, using the ML methods you learned during this course.  The inputs
-        are raw strings, so you will need to find a way to represent them as
-        feature vectors to apply most ML methods.
+        """
+        Trains the model.  The texts are raw strings, so you will need to find
+        a way to represent them as feature vectors to apply most ML methods.
+
+        You can implement this using any ML method you like.  You are also
+        allowed to use third-party libraries such as sklearn, scipy, nltk, etc,
+        with a couple exceptions:
+
+        - The classes in sklearn.feature_extraction.text are *not* allowed, nor
+          is any other library that provides similar functionality (creating
+          feature vectors from text).  Part of the purpose of this project is
+          to do the input featurization yourself.  You are welcome to look
+          through sklearn's documentation for text featurization methods to get
+          ideas; just don't import them.  Also note that using a library like
+          nltk to split text into a list of words is fine.
+
+        - Don't use any library functions that do the whole process of text
+          classification for you (i.e., you just pass it the text and labels
+          and it figures everything out).  This is sort of covered already by
+          the above point, since something that does the whole pipeline must be
+          doing featurization internally.
+
+        - An exception to the above exceptions is that you *are* allowed to use
+          pretrained deep learning models that require specific featurization.
+          For example, you might be interested in exploring pretrained
+          embedding methods like "word2vec", or perhaps pretrained models like
+          BERT.  To use them you have to use the same input features that the
+          creators did when pre-training them, which usually means using the
+          featurization code provided by the creators.  The rationale for
+          allowing this is that we want you to have the opportunity to explore
+          cutting-edge ML methods if you want to, and doing so should already
+          be enough work that you don't need to also bother with doing
+          featurization by hand.
+
+        - When in doubt, ask an instructor or TA if a particular library
+          function is allowed or not.
 
         Arguments:
             texts - A list of strings representing the inputs to the model
@@ -22,7 +54,6 @@ class TextClassificationModel:
 
     def predict(self, texts):
         """Predicts labels for the given texts.
-
         Arguments:
             texts - A list of strings
         Returns:
