@@ -1,7 +1,6 @@
 import numpy as np
 import sklearn
 
-
 class TextClassificationModel:
     def __init__(self):
         raise NotImplementedError()
@@ -23,13 +22,7 @@ class TextClassificationModel:
           ideas; just don't import them.  Also note that using a library like
           nltk to split text into a list of words is fine.
 
-        - Don't use any library functions that do the whole process of text
-          classification for you (i.e., you just pass it the text and labels
-          and it figures everything out).  This is sort of covered already by
-          the above point, since something that does the whole pipeline must be
-          doing featurization internally.
-
-        - An exception to the above exceptions is that you *are* allowed to use
+        - An exception to the above exception is that you *are* allowed to use
           pretrained deep learning models that require specific featurization.
           For example, you might be interested in exploring pretrained
           embedding methods like "word2vec", or perhaps pretrained models like
@@ -43,6 +36,20 @@ class TextClassificationModel:
 
         - When in doubt, ask an instructor or TA if a particular library
           function is allowed or not.
+
+        Hints:
+        - Don't reinvent the wheel; a little reading on what techniques are
+          commonly used for featurizing text can go a long way.  For example,
+          one such method (which has many variations) is TF-IDF:
+          https://en.wikipedia.org/wiki/Tf-idf
+          https://en.wikipedia.org/wiki/SMART_Information_Retrieval_System
+
+        - There are multiple ways to complete the assignment.  With the right
+          featurization strategy, you can pass the basic tests with one of the
+          ML algorithms you implemented for the previous homeworks.  To pass
+          the extra credit tests, you may need to use torch or sklearn unless
+          your featurization is exceptionally good or you make some special
+          modeifications to your previous homework code.
 
         Arguments:
             texts - A list of strings representing the inputs to the model

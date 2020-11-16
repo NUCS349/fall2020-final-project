@@ -1,0 +1,36 @@
+{
+    "test_imports": {
+        "weight": "required",
+        "depends": []
+    },
+    "test_netid": {
+        "weight": "required",
+        "depends": []
+    },
+    "test_dog_classifier_conv": {
+    	"weight": 10,
+    	"depends": []
+    },
+    "test_synth_classifier": {
+    	"weight": 10,
+    	"depends": []
+    },
+    "test_dbpedia": {
+    	"weight": 10,
+    	"depends": []
+    },
+    "test_extracredit_dbpedia": {
+    	"weight": 2,
+        "is_extra_credit": true,
+    	"depends": ["test_dbpedia"]
+    },
+    "test_agn": {
+    	"weight": 10,
+    	"depends": []
+    },
+    "test_extracredit_agn": {
+    	"weight": 2,
+        "is_extra_credit": true,
+    	"depends": ["test_agn"]
+    }
+}
