@@ -70,6 +70,6 @@ Use strides of size (1,1) and ReLU activation functions in all convolutional lay
 
 ## Text Classification (1 point)
 
-Write up a short description of the thought process and steps you took to complete this part of the assignment.  Mention any methods you tried that didn't give the desired results, and what you had to do to get it working in the end.  Write down the final accuracy you got on the test set for each of the two tasks (dbpedia and agn) just in case we aren't able to reproduce your results.
+Write up a short description of the thought process and steps you took to complete the text classification coding part of the assignment.  Mention any methods (featurization+models) you tried that didn't give the desired results as well as a short description (sentence or two at least, but longer if you want to give details) of the method you arrived at in the end.  Write down the final accuracy you got on the test set for each of the two tasks (dbpedia and agn) just in case we aren't able to reproduce your results.
 
 Also let us know how long you spent working on this part of the assignment and any feedback you have for it (this will help us judge the difficulty for future courses).
