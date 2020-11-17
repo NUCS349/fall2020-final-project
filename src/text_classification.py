@@ -49,7 +49,7 @@ class TextClassificationModel:
           ML algorithms you implemented for the previous homeworks.  To pass
           the extra credit tests, you may need to use torch or sklearn unless
           your featurization is exceptionally good or you make some special
-          modeifications to your previous homework code.
+          modifications to your previous homework code.
 
         Arguments:
             texts - A list of strings representing the inputs to the model

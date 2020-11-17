@@ -7,7 +7,7 @@ The convolutional neural net task involves implementing the models in `src/model
 - Converting raw text into feature vectors that can be processed by your machine learning algorithm.  We've been giving you ready-to-use feature matrices up until this point in the quarter, but deciding how to make features from raw data is an important part of machine learning in practice, so that's what you'll be doing here.
 - Choosing a machine learning model to learn from the features
 
-Read the comments in the `fit` method of the TextClassificationModel class for requirements and hints.  You aren't required to use any particular algorithm; the goal is to have you explore various featurization and machine learning methods to find a combination that acheives the desired accuracy, which is how ML commonly works in the real world.
+Read the comments in the `train` method of the TextClassificationModel class for requirements and hints.  You aren't required to use any particular algorithm; the goal is to have you explore various featurization and machine learning methods to find a combination that acheives the desired accuracy, which is how ML commonly works in the real world.
 
 **IMPORTANT:** There are two extra credit tests in the autograder, called "test_extracredit_dbpedia" and "test_extracredit_agn".  You don't need to pass those to get a 100/100 score.  If you pass all tests including those ones, you'll get 110/100, which is about 0.7 total points of extra credit.
 
