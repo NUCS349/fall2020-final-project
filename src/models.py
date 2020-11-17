@@ -4,10 +4,6 @@ import torch.nn.functional as F
 import numpy as np
 
 # Please read the free response questions before starting to code.
-#
-# Note: Avoid using nn.Sequential here, as it prevents the test code from
-# correctly checking your model architecture and will cause your code to
-# fail the tests.
 
 
 class Dog_Classifier_Conv(nn.Module):
@@ -15,7 +11,7 @@ class Dog_Classifier_Conv(nn.Module):
     This is the class that creates a convolutional neural network for classifying dog breeds
     from the DogSet dataset.
 
-    Network architecture:
+    Network architecture (see problems.md for more information):
     - Input layer
     - First hidden layer: convolutional layer of size (select kernel size and stride)
     - Second hidden layer: convolutional layer of size (select kernel size and stride)
@@ -45,6 +41,8 @@ class Dog_Classifier_Conv(nn.Module):
         super(Dog_Classifier_Conv, self).__init__()
 
     def forward(self, inputs):
+        # Note that the ordering of dimensions in the input may not be what you
+        # need for the convolutional layers.  The permute() function can help.
         raise NotImplementedError()
 
 
@@ -53,10 +51,11 @@ class Synth_Classifier(nn.Module):
     This is the class that creates a convolutional neural network for classifying
     synthesized images.
 
-    Network architecture:
+    Network architecture (see problems.md for more information):
     - Input layer
     - First hidden layer: convolutional layer of size (select kernel size and stride)
     - Second hidden layer: convolutional layer of size (select kernel size and stride)
+    - Third hidden layer: convolutional layer of size (select kernel size and stride)
     - Output layer: a linear layer with one node per class (in this case 2)
 
     Activation function: ReLU for both hidden layers
@@ -83,5 +82,7 @@ class Synth_Classifier(nn.Module):
         super(Synth_Classifier, self).__init__()
 
     def forward(self, inputs):
+        # Note that the ordering of dimensions in the input may not be what you
+        # need for the convolutional layers.  The permute() function can help.
         raise NotImplementedError()
 
