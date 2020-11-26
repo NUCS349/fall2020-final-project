@@ -1,5 +1,22 @@
 import json
 import os
+import pickle
+
+def load_synth_data(dataset_name, base_folder='data'):
+    """
+    This function loads the synthesized data provided in a picke file in the
+    /data directory.
+    """
+
+    data_path = os.path.join(base_folder, dataset_name)
+
+    with open(data_path, 'rb') as handle:
+        data = pickle.load(handle)
+
+    trainX = data['trainX']
+    trainY = data['trainY']
+
+    return trainX, trainY
 
 def load_data(path):
     if 'cache' not in load_data.__dict__:
