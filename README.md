@@ -1,4 +1,4 @@
-# Final project: Feature selection and natural language processing
+# Final Project: Feature selection and natural language processing
 
 ## Clone this repository
 
